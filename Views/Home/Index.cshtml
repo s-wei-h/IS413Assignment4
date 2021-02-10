@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.title = "Top 5 Restaurants in Provo";
+}
+@model IEnumerable<String>
+
+<div class="text-center">
+    <h1>@ViewBag.title</h1>
+
+    <ul>
+        @foreach (string rest in Model)
+        {
+            <li class="listItem">@rest</li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model FoodieSite.Models.Suggestion
+
+<div class="column">
+    <h1>Add a suggestion</h1>
+    <form asp-action="Add" method="post">
+        <div>
+            <label asp-for="name">Your Name: </label>
+            <input asp-for="name" required />
+        </div>
+
+        <div>
+            <label asp-for="sName">Suggested Restaurant Name: </label>
+            <input asp-for="sName" required />
+        </div>
+
+        <div>
+            <label asp-for="sFavDish">Your Favorite Dish at the Restaurant: </label>
+            <input asp-for="sFavDish" required />
+        </div>
+
+        <div>
+            <label asp-for="sPhone">Suggested Restaurant Phone Number: </label>
+            <input type="tel" asp-for="sPhone" placeholder="###-###-####"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </div>
+
+        <button type="submit">Post Suggestion</button>
+    </form>
+
+</div>
